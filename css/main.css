@@ -1,0 +1,57 @@
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200|Amatic+SC:400,700);
+body{
+  text-align: center;
+  text-transform: capitalize;;
+}
+
+.fakenavbar{
+  height: 4rem;
+}
+.fakenavbar, footer {
+background-color: rgba(81, 179, 250, 0.79)
+}
+
+h1{
+  font-size: 4rem;
+      font-family: 'Yanone Kaffeesatz';
+      font-weight: 100;
+}
+
+h2{
+  font-weight: 100;
+
+}
+ul{
+    margin: 0 auto;
+    padding: 0;
+}
+
+.intro li.items {
+      background-color: turquoise;
+      font-size: 2em;
+      opacity: .5;
+    }
+.intro li.items:hover {
+  opacity: .95;
+
+}
+
+li.items {
+line-height: 2rem;
+background-color: beige;
+border-radius: 20px;
+border: 4px solid white;
+display: inline-block;
+width: 30rem;
+margin:0 8rem;
+}
+
+div.brain {
+    height: 30rem;
+    background: url(https://cdn0.iconfinder.com/data/icons/ikooni-outline-seo-web/128/seo2-80-512.png) no-repeat center;
+}
+
+footer{
+  margin-top: 3rem;
+  height: 10rem;
+}
