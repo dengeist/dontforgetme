@@ -1,9 +1,12 @@
 $(document).ready(function () {
 
+  var filterItems = function(){
+    $('.checked').hide();
+  }
+
   $('#listofstuff').submit(function(e){
     e.preventDefault();
       var userInput = $('#addstuff').val();
-      console.log(userInput);
 
       $('#newitem').append('<li class="items">'+userInput+'</li>');
       $('#addstuff').val('');
@@ -17,6 +20,6 @@ $(document).ready(function () {
          $('#addstuff').val(' ');
     });
       $('#newitem').on('click', 'li.items', function() {
-        $(this).toggleClass("checked");
+        $(this).toggleClass('checked');
       });
 });
