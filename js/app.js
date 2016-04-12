@@ -1,31 +1,29 @@
+$(document).ready(function() {
 
-$(document).ready(function () {
-
-
-    $('#FilterButton').on('click', function(e){
+    $('#FilterButton').on('click', function(e) {
         $('.checked').hide();
     });
 
-  $('form').submit(function(e){
-    e.preventDefault();
-      var userInput = $('#addStuff').val();
-
-      $('.itemsList').append('<li class="items unchecked">'+userInput+'</li>');
-      $('#addStuff').val('');
+    $('form').submit(function(e) {
+        e.preventDefault();
+        var userInput = $('#addStuff').val();
+        $('.itemsList').append('<li class="items unchecked">' + userInput + '</li>');
+        $('#addStuff').val('');
     });
 
-    $('#clearButton').click(function(){
+    $('#clearButton').click(function() {
         $('.itemsList').empty();
     });
 
-      $('#addStuff').on ('click', function(){
-         $('#addStuff').val(' ');
+    $('#addStuff').on('click', function() {
+        $('#addStuff').val(' ');
     });
-      $('.itemsList').on('click', 'li.items', function() {
+
+    $('.itemsList').on('click', 'li.items', function() {
         $(this).toggleClass('checked unchecked');
     });
 
-    $('#addStuff').on("change",function(){
+    $('#addStuff').on("change", function() {
         var filter = $(this).val(),
             list = $('#newitem');
         list.find('li:contains(' + filter + ')').css("border", "3px solid red");
