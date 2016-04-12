@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('#FilterButton').on('click', function(e) {
+    $('#filterButton').on('click', function(e) {
         $('.checked').hide();
     });
 
