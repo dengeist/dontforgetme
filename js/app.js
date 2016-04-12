@@ -22,14 +22,3 @@ $(document).ready(function () {
       });
 
 });
-
-
-//get items input
-//
-// $('#clearbutton').click(function(){
-// $('#newitem').clear();
-
-//clear the data within the addstuff button
-//make .keydown enter #addstuff to the list
-
-  // alert(userInput);
