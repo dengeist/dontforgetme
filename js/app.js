@@ -25,7 +25,7 @@ $(document).ready(function() {
 
     $('#addStuff').on("change", function() {
         var filter = $(this).val(),
-            list = $('#newitem');
+            list = $('.itemsList');
         list.find('li:contains(' + filter + ')').css("border", "3px solid red");
         list.find('li:not(:contains(' + filter + '))').css("border", "1px dashed green");
         console.log(filter);
