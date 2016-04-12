@@ -15,7 +15,7 @@ $(document).ready(function () {
     });
 
     $('#clearbutton').click(function(){
-            $('#newitem').empty();
+        $('#newitem').empty();
     });
 
       $('#addstuff').on ('click', function(){
