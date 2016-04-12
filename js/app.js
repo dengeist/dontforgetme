@@ -1,17 +1,11 @@
 $(document).ready(function () {
 
-  var filterItems = function(e){
-      e.preventDefault();
-    $('.checked').hide();
-    $('#filterbutton').click(
-        function(){
-         alert('button is being pressed');
-     });
-};
-
-
+    $('#filterbutton').on('click', function(e){
+        $('.checked').hide();
+    })
 
   $('#listofstuff').submit(function(e){
+    e.preventDefault();
       var userInput = $('#addstuff').val();
 
       $('#newitem').append('<li class="items unchecked">'+userInput+'</li>');
@@ -29,5 +23,3 @@ $(document).ready(function () {
         $(this).toggleClass('checked unchecked');
       });
 });
-
-filterItems();
