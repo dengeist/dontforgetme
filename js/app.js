@@ -7,7 +7,7 @@ $(document).ready(function() {
     $('form').submit(function(e) {
         e.preventDefault();
         var userInput = $('#addStuff').val();
-        $('.itemsList').append('<li class="items unchecked">' + userInput + '</li>');
+        $('.itemsList').append('<li class="item unchecked">' + userInput + '</li>');
         $('#addStuff').val('');
     });
 
@@ -19,15 +19,14 @@ $(document).ready(function() {
         $('#addStuff').val(' ');
     });
 
-    $('.itemsList').on('click', 'li.items', function() {
+    $('.itemsList').on('click', 'li.item', function() {
         $(this).toggleClass('checked unchecked');
     });
 
     $('#addStuff').on("change", function() {
         var filter = $(this).val(),
             list = $('.itemsList');
-        list.find('li:contains(' + filter + ')').css("border", "3px solid red");
-        list.find('li:not(:contains(' + filter + '))').css("border", "1px dashed green");
-        console.log(filter);
+        list.find('li:contains(' + filter + ')').slideUp();
+        list.find('li:not(:contains(' + filter + '))').slideDown();
     });
 });
