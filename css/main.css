@@ -4,10 +4,10 @@ body{
     text-transform: capitalize;;
 }
 
-.fakenavbar{
+.fakeNavBar{
     height: 4rem;
 }
-.fakenavbar, footer {
+.fakeNavBar, footer {
     background-color: rgba(81, 179, 250, 0.79)
 }
 
@@ -30,7 +30,7 @@ ul{
     padding: 0;
 }
 
-#addstuff {
+#addStuff {
     display: block;
     margin: 0 auto;
     background-color: #A0F0E8;
@@ -80,7 +80,7 @@ li.items:hover {
 button{
     background-color: turquoise;
 }
-div.brain {
+div.brainImage {
     height: 30rem;
     background: url(https://cdn0.iconfinder.com/data/icons/ikooni-outline-seo-web/128/seo2-80-512.png) no-repeat center;
 }
