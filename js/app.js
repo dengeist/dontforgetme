@@ -10,8 +10,7 @@ $(document).ready(function () {
     });
 
     $('#clearbutton').click(function(){
-      // alert('testing');
-      $('#newitem').empty();
+            $('#newitem').empty();
     });
 
       $('#addstuff').on ('click', function(){
@@ -20,5 +19,4 @@ $(document).ready(function () {
       $('#newitem').on('click', 'li.items', function() {
         $(this).toggleClass("checked");
       });
-
 });
