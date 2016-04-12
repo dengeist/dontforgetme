@@ -1,14 +1,20 @@
 $(document).ready(function () {
 
-  var filterItems = function(){
+  var filterItems = function(e){
+      e.preventDefault();
     $('.checked').hide();
-  }
+    $('#filterbutton').click(
+        function(){
+         alert('button is being pressed');
+     });
+};
+
+
 
   $('#listofstuff').submit(function(e){
-    e.preventDefault();
       var userInput = $('#addstuff').val();
 
-      $('#newitem').append('<li class="items">'+userInput+'</li>');
+      $('#newitem').append('<li class="items unchecked">'+userInput+'</li>');
       $('#addstuff').val('');
     });
 
@@ -20,6 +26,8 @@ $(document).ready(function () {
          $('#addstuff').val(' ');
     });
       $('#newitem').on('click', 'li.items', function() {
-        $(this).toggleClass('checked');
+        $(this).toggleClass('checked unchecked');
       });
 });
+
+filterItems();
