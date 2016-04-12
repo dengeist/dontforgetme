@@ -2,7 +2,7 @@
 $(document).ready(function () {
 
 
-    $('#filterButton').on('click', function(e){
+    $('#FilterButton').on('click', function(e){
         $('.checked').hide();
     });
 
