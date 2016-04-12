@@ -1,8 +1,17 @@
+var search = function(){
+    $('.addstuff').change(function(){
+        var filter = $(this).val();
+        $('.itemsList').find('li:contains(' + filter + ')').parent().slideDown();
+
+     }
+    );
+};
+
 $(document).ready(function () {
 
     $('#filterbutton').on('click', function(e){
         $('.checked').hide();
-    })
+    });
 
   $('#listofstuff').submit(function(e){
     e.preventDefault();
@@ -23,3 +32,5 @@ $(document).ready(function () {
         $(this).toggleClass('checked unchecked');
       });
 });
+
+search();
