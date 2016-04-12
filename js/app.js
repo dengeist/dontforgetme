@@ -2,30 +2,30 @@
 $(document).ready(function () {
 
 
-    $('#filterbutton').on('click', function(e){
+    $('#filterButton').on('click', function(e){
         $('.checked').hide();
     });
 
-  $('#listofstuff').submit(function(e){
+  $('#listOfStuff').submit(function(e){
     e.preventDefault();
-      var userInput = $('#addstuff').val();
+      var userInput = $('#addStuff').val();
 
-      $('#newitem').append('<li class="items unchecked">'+userInput+'</li>');
-      $('#addstuff').val('');
+      $('.itemsList').append('<li class="items unchecked">'+userInput+'</li>');
+      $('#addStuff').val('');
     });
 
-    $('#clearbutton').click(function(){
-        $('#newitem').empty();
+    $('#clearButton').click(function(){
+        $('.itemsList').empty();
     });
 
-      $('#addstuff').on ('click', function(){
-         $('#addstuff').val(' ');
+      $('#addStuff').on ('click', function(){
+         $('#addStuff').val(' ');
     });
-      $('#newitem').on('click', 'li.items', function() {
+      $('.itemsList').on('click', 'li.items', function() {
         $(this).toggleClass('checked unchecked');
     });
 
-    $('#addstuff').on("change",function(){
+    $('#addStuff').on("change",function(){
         var filter = $(this).val(),
             list = $('#newitem');
         list.find('li:contains(' + filter + ')').css("border", "3px solid red");
