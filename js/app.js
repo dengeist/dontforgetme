@@ -6,7 +6,7 @@ $(document).ready(function () {
         $('.checked').hide();
     });
 
-  $('#listOfStuff').submit(function(e){
+  $('form').submit(function(e){
     e.preventDefault();
       var userInput = $('#addStuff').val();
 
