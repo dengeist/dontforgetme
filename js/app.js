@@ -1,13 +1,6 @@
-var search = function(){
-    $('.addstuff').change(function(){
-        var filter = $(this).val();
-        $('.itemsList').find('li:contains(' + filter + ')').parent().slideDown();
-
-     }
-    );
-};
 
 $(document).ready(function () {
+
 
     $('#filterbutton').on('click', function(e){
         $('.checked').hide();
@@ -30,7 +23,13 @@ $(document).ready(function () {
     });
       $('#newitem').on('click', 'li.items', function() {
         $(this).toggleClass('checked unchecked');
-      });
-});
+    });
 
-search();
+    $('#addstuff').on("change",function(){
+        var filter = $(this).val(),
+            list = $('#newitem');
+        list.find('li:contains(' + filter + ')').css("border", "3px solid red");
+        list.find('li:not(:contains(' + filter + '))').css("border", "1px dashed green");
+        console.log(filter);
+    });
+});
