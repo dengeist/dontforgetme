@@ -18,7 +18,7 @@ $(document).ready(function () {
          $('#addstuff').val(' ');
     });
       $('#newitem').on('click', 'li.items', function() {
-        $(this).wrap("<strike>");
+        $(this).toggleClass("checked");
       });
 
 });

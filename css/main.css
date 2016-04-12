@@ -17,6 +17,10 @@ h1{
       font-weight: 100;
 }
 
+.checked{
+  text-decoration: line-through;
+}
+
 h2{
   font-weight: 100;
 
@@ -69,7 +73,7 @@ opacity: 1;
 }
 
 li.items:hover {
-  opacity:.6; 
+  opacity:.6;
 
 }
 
