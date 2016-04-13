@@ -4,12 +4,10 @@ $(document).ready(function() {
     };
 
     $('form').submit(function(e) {
+        var newItem = makeProperNoun($('.addStuff').val());
         e.preventDefault();
-        var userInput = makeProperNoun($('.addStuff').val());
-
-        $('.itemsList').append('<li class="item unchecked">' + userInput + '</li>');
+        $('.itemsList').append('<li class="item unchecked">' + newItem + '</li>');
         $('.addStuff').val('');
-        console.log(userInput)
     });
 
     $('.addStuff').on('click', function() {
@@ -21,7 +19,7 @@ $(document).ready(function() {
     });
 
     $('.addStuff').on("change", function() {
-        var filter = $(this).val(),
+        var filter = makeProperNoun($('.addStuff').val())
             list = $('.itemsList');
         list.find('li:contains(' + filter + ')').slideUp();
         list.find('li:not(:contains(' + filter + '))').slideDown();
