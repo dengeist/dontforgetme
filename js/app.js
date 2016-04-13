@@ -27,11 +27,11 @@ $(document).ready(function() {
         list.find('li:not(:contains(' + filter + '))').slideDown();
     });
 
-    $('.filter').on('click', function(e) {
+    $('.filterBtn').on('click', function(e) {
         $('.checked').hide();
     });
 
-    $('#.clear').click(function() {
+    $('.clearBtn').click(function() {
         $('.itemsList').empty();
     });
 });
