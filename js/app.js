@@ -24,7 +24,7 @@ $(document).ready(function() {
         $('#addStuff').val(' ');
     });
 
-    $('.itemsList').on('click', 'li.item', function() {
+    $('.itemsList').on('click', '.item', function() {
         $(this).toggleClass('checked unchecked');
     });
 
