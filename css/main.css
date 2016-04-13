@@ -40,12 +40,16 @@ ul{
 
 }
 
-.intro li.item, button{
+#clearButton{
+    opacity: .8;
+}
+
+.intro .item, button{
     background-color: turquoise;
     font-size: 3em;
     opacity: .5;
 }
-.intro li.item:hover, button {
+.intro .item:hover, button {
     opacity: .95;
 }
 
@@ -56,7 +60,7 @@ input {
     font-size: 2rem;
 }
 
-li.item, button {
+.item, button {
     color:darkslategray;
     line-height: 3rem;
     background-color: lightgoldenrodyellow;
@@ -72,7 +76,7 @@ li.item, button {
     opacity: 1;
 }
 
-li.item:hover {
+#clearButton:hover, .item:hover {
     opacity:.6;
 
 }
