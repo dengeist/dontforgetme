@@ -5,33 +5,33 @@ $(document).ready(function() {
 
     $('form').submit(function(e) {
         e.preventDefault();
-        var userInput = makeProperNoun($('#addStuff').val());
+        var userInput = makeProperNoun($('.addStuff').val());
 
         $('.itemsList').append('<li class="item unchecked">' + userInput + '</li>');
-        $('#addStuff').val('');
+        $('.addStuff').val('');
         console.log(userInput)
     });
 
-    $('#addStuff').on('click', function() {
-        $('#addStuff').val(' ');
+    $('.addStuff').on('click', function() {
+        $('.addStuff').val(' ');
     });
 
     $('.itemsList').on('click', '.item', function() {
         $(this).toggleClass('checked unchecked');
     });
 
-    $('#addStuff').on("change", function() {
+    $('.addStuff').on("change", function() {
         var filter = $(this).val(),
             list = $('.itemsList');
         list.find('li:contains(' + filter + ')').slideUp();
         list.find('li:not(:contains(' + filter + '))').slideDown();
     });
 
-    $('#filterButton').on('click', function(e) {
+    $('.filter').on('click', function(e) {
         $('.checked').hide();
     });
 
-    $('#clearButton').click(function() {
+    $('#.clear').click(function() {
         $('.itemsList').empty();
     });
 });

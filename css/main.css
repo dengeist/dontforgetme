@@ -30,7 +30,7 @@ ul{
     padding: 0;
 }
 
-#addStuff {
+.addStuff {
     display: block;
     margin: 0 auto;
     background-color: #A0F0E8;
@@ -38,10 +38,6 @@ ul{
     font-family: 'Yanone Kaffeesatz';
     font-weight: 100;
 
-}
-
-#clearButton{
-    opacity: .8;
 }
 
 .intro .item, button{
@@ -75,15 +71,14 @@ input {
     font-family: 'Yanone Kaffeesatz';
     opacity: 1;
 }
-
-#clearButton:hover, .item:hover {
-    opacity:.6;
-
-}
-
 button{
     background-color: turquoise;
 }
+
+button:hover, .item:hover {
+    opacity:.6;
+}
+
 div.brainImage {
     height: 30rem;
     background: url(https://cdn0.iconfinder.com/data/icons/ikooni-outline-seo-web/128/seo2-80-512.png) no-repeat center;
