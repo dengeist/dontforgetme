@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var makeProperNoun = function(string){
+    var makeProperNoun = function(string) {
         return string && string[0].toUpperCase() + string.slice(1);
     };
 
@@ -10,14 +10,6 @@ $(document).ready(function() {
         $('.itemsList').append('<li class="item unchecked">' + userInput + '</li>');
         $('#addStuff').val('');
         console.log(userInput)
-    });
-
-    $('#clearButton').click(function() {
-        $('.itemsList').empty();
-    });
-
-    $('#filterButton').on('click', function(e) {
-        $('.checked').hide();
     });
 
     $('#addStuff').on('click', function() {
@@ -33,5 +25,13 @@ $(document).ready(function() {
             list = $('.itemsList');
         list.find('li:contains(' + filter + ')').slideUp();
         list.find('li:not(:contains(' + filter + '))').slideDown();
+    });
+
+    $('#filterButton').on('click', function(e) {
+        $('.checked').hide();
+    });
+
+    $('#clearButton').click(function() {
+        $('.itemsList').empty();
     });
 });
