@@ -1,18 +1,23 @@
 $(document).ready(function() {
-
-    $('#filterButton').on('click', function(e) {
-        $('.checked').hide();
-    });
+    var makeProperNoun = function(string){
+        return string && string[0].toUpperCase() + string.slice(1);
+    };
 
     $('form').submit(function(e) {
         e.preventDefault();
-        var userInput = $('#addStuff').val();
+        var userInput = makeProperNoun($('#addStuff').val());
+
         $('.itemsList').append('<li class="item unchecked">' + userInput + '</li>');
         $('#addStuff').val('');
+        console.log(userInput)
     });
 
     $('#clearButton').click(function() {
         $('.itemsList').empty();
+    });
+
+    $('#filterButton').on('click', function(e) {
+        $('.checked').hide();
     });
 
     $('#addStuff').on('click', function() {
